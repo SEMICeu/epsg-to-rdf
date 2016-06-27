@@ -13,6 +13,7 @@ Comments and inquiries should be sent to the GeoDCAT-AP WG mailing list:
 # Content
 
 * [`epsg-to-rdf.xsl`](./epsg-to-rdf.xsl): The code of the XSLT.
+* [`LICENCE.md`](./LICENCE.md): The XSLT's licence.
 * [`README.md`](./README.md): This document.
 
 #  Credits
