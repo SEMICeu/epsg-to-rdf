@@ -33,9 +33,10 @@
 
   PURPOSE AND USAGE
 
-  This XSLT is a proof of concept for the implementation of the specification
-  concerning the geospatial profile of DCAT-AP (GeoDCAT-AP), available on
-  Joinup, the collaboration platform of the EU ISA Programme:
+  This XSLT is a proof of concept for the RDF representation of the OGC EPSG
+  register of coordinate reference systems, extending the RDF mappings for
+  reference systems defined in the geospatial profile of DCAT-AP (GeoDCAT-AP), 
+  available on Joinup, the collaboration platform of the EU ISA Programme:
 
     https://joinup.ec.europa.eu/node/139283/
 
@@ -76,7 +77,7 @@
     xmlns:igp    = "http://inspire.ec.europa.eu/schemas/geoportal/1.0"
     xmlns:i      = "http://inspire.ec.europa.eu/schemas/common/1.0"
     xmlns:schema = "http://schema.org/"
-    exclude-result-prefixes="cnt dctype epsg crs-nts xsl earl dcat foaf wdrs prov vcard adms gsp locn gmd gmx gco srv xsi gml xlink igp i schema"
+    exclude-result-prefixes="cnt dctype epsg crs-nts xsl earl dcat foaf wdrs prov vcard adms gsp gmd gmx gco srv xsi gml xlink igp i schema"
     version="1.0">
 
   <xsl:output 
