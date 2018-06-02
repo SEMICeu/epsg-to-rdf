@@ -6,9 +6,7 @@ https://joinup.ec.europa.eu/node/139283/
 
 As such, this XSLT must be considered as unstable, and can be updated any time based on the revisions to the GeoDCAT-AP specifications and related work in the framework of the EU ISA Programme.
 
-Comments and inquiries should be sent to the GeoDCAT-AP WG mailing list:
-
-    dcat_application_profile-geo@joinup.ec.europa.eu
+Comments and inquiries should be sent via the [issue tracker](https://github.com/SEMICeu/epsg-to-rdf/issues).
 
 # Content
 
