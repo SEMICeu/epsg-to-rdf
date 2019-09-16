@@ -2,7 +2,7 @@
 
 This XSLT is a proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP, the geospatial profile of [DCAT-AP](https://joinup.ec.europa.eu/node/63567/) available on Joinup, the collaboration platform of the [EU ISA Programme](http://ec.europa.eu/isa):
 
-https://joinup.ec.europa.eu/node/139283/
+https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe
 
 As such, this XSLT must be considered as unstable, and can be updated any time based on the revisions to the GeoDCAT-AP specifications and related work in the framework of the EU ISA Programme.
 
