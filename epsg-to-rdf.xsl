@@ -2,13 +2,13 @@
 
 <!--
 
-  Copyright 2016-2017 EUROPEAN UNION
-  Licensed under the EUPL, Version 1.1 or - as soon they will be approved by
+  Copyright 2016-2021 EUROPEAN UNION
+  Licensed under the EUPL, Version 1.2 or - as soon they will be approved by
   the European Commission - subsequent versions of the EUPL (the "Licence");
   You may not use this work except in compliance with the Licence.
   You may obtain a copy of the Licence at:
 
-  http://ec.europa.eu/idabc/eupl
+  https://joinup.ec.europa.eu/collection/eupl
 
   Unless required by applicable law or agreed to in writing, software
   distributed under the Licence is distributed on an "AS IS" basis,
@@ -17,10 +17,9 @@
   limitations under the Licence.
 
   Authors:      European Commission, Joint Research Centre (JRC)
-                Andrea Perego <andrea.perego@ec.europa.eu>
+                Andrea Perego (https://github.com/andrea-perego)
 
-  Contributors: ISA GeoDCAT-AP Working Group
-                <dcat_application_profile-geo@joinup.ec.europa.eu>
+  Contributors: ISA GeoDCAT-AP Working Group (https://github.com/SEMICeu/geodcat-ap) 
 
   This work was supported by the EU Interoperability Solutions for
   European Public Administrations Programme (http://ec.europa.eu/isa)
@@ -84,7 +83,7 @@
     method="xml"
     indent="yes"
     encoding="utf-8"
-    cdata-section-elements="locn:geometry" />
+    cdata-section-elements="locn:geometry dcat:bbox" />
 
 <!--
 
@@ -308,10 +307,17 @@
     <xsl:param name="GeoJSONLiteral">{"type":"Polygon","crs":{"type":"name","properties":{"name":"<xsl:value-of select="$SrsUrn"/>"}},"coordinates":[[[<xsl:value-of select="$west"/><xsl:text>,</xsl:text><xsl:value-of select="$north"/>],[<xsl:value-of select="$east"/><xsl:text>,</xsl:text><xsl:value-of select="$north"/>],[<xsl:value-of select="$east"/><xsl:text>,</xsl:text><xsl:value-of select="$south"/>],[<xsl:value-of select="$west"/><xsl:text>,</xsl:text><xsl:value-of select="$south"/>],[<xsl:value-of select="$west"/><xsl:text>,</xsl:text><xsl:value-of select="$north"/>]]]}</xsl:param>
 
 <!-- Recommended geometry encodings -->
+<!--
     <locn:geometry rdf:datatype="{$gsp}wktLiteral"><xsl:value-of select="$WKTLiteral"/></locn:geometry>
     <locn:geometry rdf:datatype="{$gsp}gmlLiteral"><xsl:value-of select="$GMLLiteral"/></locn:geometry>
+-->
+    <dcat:bbox rdf:datatype="{$gsp}wktLiteral"><xsl:value-of select="$WKTLiteral"/></dcat:bbox>
+    <dcat:bbox rdf:datatype="{$gsp}gmlLiteral"><xsl:value-of select="$GMLLiteral"/></dcat:bbox>
 <!-- Additional geometry encodings -->
+<!--
     <locn:geometry rdf:datatype="{$geojsonMediaTypeUri}"><xsl:value-of select="$GeoJSONLiteral"/></locn:geometry>
+-->
+    <dcat:bbox rdf:datatype="{$gsp}geoJSONLiteral"><xsl:value-of select="$GeoJSONLiteral"/></dcat:bbox>
 <!--
       <locn:geometry rdf:datatype="{$dct}Box"><xsl:value-of select="$DCTBox"/></locn:geometry>
 -->
