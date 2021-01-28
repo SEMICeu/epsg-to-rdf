@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:locn="http://www.w3.org/ns/locn#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="http://www.opengis.net/def/crs/EPSG/0/4258">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
+    <dct:type rdf:resource="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem"/>
+    <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.opengis.net/def/crs/EPSG/0/4258</skos:notation>
+    <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.opengis.net/def/crs/EPSG/0/4258</dct:identifier>
+    <owl:sameAs rdf:resource="urn:ogc:def:crs:EPSG::4258"/>
+    <skos:inScheme rdf:resource="http://www.opengis.net/def/crs/EPSG/0"/>
+    <skos:topConceptOf rdf:resource="http://www.opengis.net/def/crs/EPSG/0"/>
+    <skos:prefLabel xml:lang="en">ETRS89</skos:prefLabel>
+    <rdfs:label xml:lang="en">ETRS89</rdfs:label>
+    <dct:title xml:lang="en">ETRS89</dct:title>
+    <skos:scopeNote xml:lang="en">Spatial referencing.</skos:scopeNote>
+    <rdfs:comment xml:lang="en">Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.</rdfs:comment>
+    <dc:type xml:lang="en">geographic 2d</dc:type>
+    <dc:source xml:lang="en">EPSG. See 3D CRS for original information source.</dc:source>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-14</dct:modified>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/1997.110/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/1999.110/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2000.720/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2003.370/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2007.079/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2010.003/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2015.013/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2017.029/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2018.008/export/?format=gml"/>
+    <skos:changeNote rdf:resource="https://apps.epsg.org/api/v1/CoordRefSystem/2020.026/export/?format=gml"/>
+    <dct:spatial>
+      <dct:Location rdf:about="https://apps.epsg.org/api/v1/Extent/1298/export?format=gml"/>
+    </dct:spatial>
+    <prov:wasDerivedFrom xmlns:prov="http://www.w3.org/ns/prov#">
+      <prov:Entity rdf:about="http://www.opengis.net/def/crs/EPSG/0/4937"/>
+    </prov:wasDerivedFrom>
+    <prov:qualifiedDerivation xmlns:prov="http://www.w3.org/ns/prov#">
+      <prov:Derivation>
+        <prov:entity rdf:resource="http://www.opengis.net/def/crs/EPSG/0/4937"/>
+        <prov:hadActivity>
+          <prov:Activity>
+            <prov:qualifiedAssociation>
+              <prov:Association>
+                <prov:hadPlan>
+                  <prov:Plan rdf:about="https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml"/>
+                </prov:hadPlan>
+              </prov:Association>
+            </prov:qualifiedAssociation>
+          </prov:Activity>
+        </prov:hadActivity>
+      </prov:Derivation>
+    </prov:qualifiedDerivation>
+    <dct:relation rdf:resource="https://apps.epsg.org/api/v1/CoordSystem/6422/export?format=gml"/>
+    <dct:relation rdf:resource="https://apps.epsg.org/api/v1/Datum/6258/export?format=gml"/>
+  </rdf:Description>
+</rdf:RDF>

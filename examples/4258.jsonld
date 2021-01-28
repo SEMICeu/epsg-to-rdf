@@ -1,0 +1,210 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml",
+    "@type": [
+      "http://www.w3.org/ns/prov#Plan"
+    ]
+    },
+    {
+    "@id": "_:N028000ea93ee449eba1b078b96ce7b64",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N29a0af7cc6d544d3bccaae012bc0f7a3"
+      }
+    ]
+    },
+    {
+    "@id": "http://www.opengis.net/def/crs/EPSG/0/4258",
+    "@type": [
+      "http://purl.org/dc/terms/Standard",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/elements/1.1/source": [
+      {
+      "@language": "en",
+      "@value": "EPSG. See 3D CRS for original information source."
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/type": [
+      {
+      "@language": "en",
+      "@value": "geographic 2d"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@value": "http://www.opengis.net/def/crs/EPSG/0/4258"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value": "2020-03-14"
+      }
+    ],
+    "http://purl.org/dc/terms/relation": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Datum/6258/export?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordSystem/6422/export?format=gml"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Extent/1298/export?format=gml"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "ETRS89"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+      "@language": "en",
+      "@value": "Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "ETRS89"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+      "@value": false
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+      "@id": "urn:ogc:def:crs:EPSG::4258"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#changeNote": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2003.370/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2020.026/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2010.003/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2000.720/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2017.029/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2007.079/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/1997.110/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2015.013/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/1999.110/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2018.008/export/?format=gml"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@value": "http://www.opengis.net/def/crs/EPSG/0/4258"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "ETRS89"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "Spatial referencing."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedDerivation": [
+      {
+      "@id": "_:Ne07dd5f8d9e449619af0fb4b6ce1f8f4"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/4937"
+      }
+    ]
+    },
+    {
+    "@id": "http://www.opengis.net/def/crs/EPSG/0/4937",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+    },
+    {
+    "@id": "_:N29a0af7cc6d544d3bccaae012bc0f7a3",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml"
+      }
+    ]
+    },
+    {
+    "@id": "https://apps.epsg.org/api/v1/Extent/1298/export?format=gml",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+    },
+    {
+    "@id": "_:Ne07dd5f8d9e449619af0fb4b6ce1f8f4",
+    "@type": [
+      "http://www.w3.org/ns/prov#Derivation"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/4937"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadActivity": [
+      {
+      "@id": "_:N028000ea93ee449eba1b078b96ce7b64"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/epsg-to-rdf/examples/4258.rdf"
+  }
+]

@@ -1,0 +1,54 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.opengis.net/def/crs/EPSG/0/4258> a dct:Standard,
+    skos:Concept ;
+  rdfs:label "ETRS89"@en ;
+  dc:source "EPSG. See 3D CRS for original information source."@en ;
+  dc:type "geographic 2d"@en ;
+  dct:identifier "http://www.opengis.net/def/crs/EPSG/0/4258"^^xsd:anyURI ;
+  dct:modified "2020-03-14"^^xsd:dateTime ;
+  dct:relation <https://apps.epsg.org/api/v1/CoordSystem/6422/export?format=gml>,
+    <https://apps.epsg.org/api/v1/Datum/6258/export?format=gml> ;
+  dct:spatial <https://apps.epsg.org/api/v1/Extent/1298/export?format=gml> ;
+  dct:title "ETRS89"@en ;
+  dct:type <http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem> ;
+  rdfs:comment "Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction."@en ;
+  owl:deprecated false ;
+  owl:sameAs <urn:ogc:def:crs:EPSG::4258> ;
+  skos:changeNote <https://apps.epsg.org/api/v1/CoordRefSystem/1997.110/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/1999.110/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2000.720/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2003.370/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2007.079/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2010.003/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2015.013/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2017.029/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2018.008/export/?format=gml>,
+    <https://apps.epsg.org/api/v1/CoordRefSystem/2020.026/export/?format=gml> ;
+  skos:inScheme <http://www.opengis.net/def/crs/EPSG/0> ;
+  skos:notation "http://www.opengis.net/def/crs/EPSG/0/4258"^^xsd:anyURI ;
+  skos:prefLabel "ETRS89"@en ;
+  skos:scopeNote "Spatial referencing."@en ;
+  skos:topConceptOf <http://www.opengis.net/def/crs/EPSG/0> ;
+  prov:qualifiedDerivation [ a prov:Derivation ;
+      prov:entity <http://www.opengis.net/def/crs/EPSG/0/4937> ;
+      prov:hadActivity [ a prov:Activity ;
+          prov:qualifiedAssociation [ a prov:Association ;
+              prov:hadPlan <https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml> ] ] ] ;
+  prov:wasDerivedFrom <http://www.opengis.net/def/crs/EPSG/0/4937> .
+
+<https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml> a prov:Plan .
+
+<https://apps.epsg.org/api/v1/Extent/1298/export?format=gml> a dct:Location .
+
+<http://www.opengis.net/def/crs/EPSG/0/4937> a prov:Entity .
+

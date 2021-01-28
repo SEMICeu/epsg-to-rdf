@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gml:GeodeticCRS xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:2.2:dataset" gml:id="epsg-crs-4258" xmlns:gml="http://www.opengis.net/gml/3.2">
+  <gml:metaDataProperty>
+    <epsg:CommonMetaData>
+      <epsg:type>geographic 2d</epsg:type>
+      <epsg:alias code="10641" codeSpace="1029" alias="ETRS89-GRS80" />
+      <epsg:informationSource>EPSG. See 3D CRS for original information source.</epsg:informationSource>
+      <epsg:revisionDate>2020-03-14</epsg:revisionDate>
+      <epsg:changes>
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/1997.110/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/1999.110/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2000.720/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2003.370/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2007.079/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2010.003/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2015.013/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2017.029/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2018.008/export/?format=gml" />
+        <epsg:changeID xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/2020.026/export/?format=gml" />
+      </epsg:changes>
+      <epsg:show>true</epsg:show>
+      <epsg:isDeprecated>false</epsg:isDeprecated>
+      <epsg:Usage>
+        <epsg:extent xlink:href="https://apps.epsg.org/api/v1/Extent/1298/export?format=gml" />
+        <gml:scope>Spatial referencing.</gml:scope>
+      </epsg:Usage>
+    </epsg:CommonMetaData>
+  </gml:metaDataProperty>
+  <gml:metaDataProperty>
+    <epsg:CRSMetaData>
+      <epsg:projectionConversion xlink:href="https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml" />
+      <epsg:sourceGeographicCRS xlink:href="https://apps.epsg.org/api/v1/CoordRefSystem/4937/export?format=gml" />
+    </epsg:CRSMetaData>
+  </gml:metaDataProperty>
+  <gml:identifier codeSpace="EPSG">4258</gml:identifier>
+  <gml:name>ETRS89</gml:name>
+  <gml:remarks>Has been realized through ETRF89, ETRF90, ETRF91, ETRF92, ETRF93, ETRF94, ETRF96, ETRF97, ETRF2000, ETRF2005 and ETRF2014. This 'ensemble' covers any or all of these realizations without distinction.</gml:remarks>
+  <gml:scope />
+  <gml:ellipsoidalCS xlink:href="https://apps.epsg.org/api/v1/CoordSystem/6422/export?format=gml" />
+  <gml:geodeticDatum xlink:href="https://apps.epsg.org/api/v1/Datum/6258/export?format=gml" />
+</gml:GeodeticCRS>

@@ -1,0 +1,189 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "http://www.opengis.net/def/crs/EPSG/0/4326",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "http://purl.org/dc/elements/1.1/source": [
+      {
+      "@language": "en",
+      "@value": "EPSG. See 3D CRS for original information source."
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/type": [
+      {
+      "@language": "en",
+      "@value": "geographic 2d"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@value": "http://www.opengis.net/def/crs/EPSG/0/4326"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value": "2020-03-14"
+      }
+    ],
+    "http://purl.org/dc/terms/relation": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Datum/6326/export?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordSystem/6422/export?format=gml"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Extent/1262/export?format=gml"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "WGS 84"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "WGS 84"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#deprecated": [
+      {
+      "@value": false
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+      "@id": "urn:ogc:def:crs:EPSG::4326"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#changeNote": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2003.370/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2020.027/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2007.079/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2002.151/export/?format=gml"
+      },
+      {
+      "@id": "https://apps.epsg.org/api/v1/CoordRefSystem/2006.810/export/?format=gml"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@value": "http://www.opengis.net/def/crs/EPSG/0/4326"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "WGS 84"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "Horizontal component of 3D system."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedDerivation": [
+      {
+      "@id": "_:N2db82216861d49a5aabfb2e8e8192aa8"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+      }
+    ]
+    },
+    {
+    "@id": "_:N0df1e5ee626949cbbf7d86560c45cd89",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N8327c563b4c2464babdce37dd9da3f35"
+      }
+    ]
+    },
+    {
+    "@id": "_:N8327c563b4c2464babdce37dd9da3f35",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml"
+      }
+    ]
+    },
+    {
+    "@id": "http://www.opengis.net/def/crs/EPSG/0/4979",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ]
+    },
+    {
+    "@id": "https://apps.epsg.org/api/v1/Extent/1262/export?format=gml",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+    },
+    {
+    "@id": "https://apps.epsg.org/api/v1/Conversion/15593/export?format=gml",
+    "@type": [
+      "http://www.w3.org/ns/prov#Plan"
+    ]
+    },
+    {
+    "@id": "_:N2db82216861d49a5aabfb2e8e8192aa8",
+    "@type": [
+      "http://www.w3.org/ns/prov#Derivation"
+    ],
+    "http://www.w3.org/ns/prov#entity": [
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/4979"
+      }
+    ],
+    "http://www.w3.org/ns/prov#hadActivity": [
+      {
+      "@id": "_:N0df1e5ee626949cbbf7d86560c45cd89"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/epsg-to-rdf/examples/4326.rdf"
+  }
+]
