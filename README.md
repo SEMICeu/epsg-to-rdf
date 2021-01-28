@@ -1,6 +1,6 @@
 # Purpose and usage
 
-This XSLT is a proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP, the geospatial profile of [DCAT-AP](https://joinup.ec.europa.eu/node/63567/) available on Joinup, the collaboration platform of the [EU ISA Programme](http://ec.europa.eu/isa):
+This XSLT is a proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP, the geospatial profile of [DCAT-AP](https://joinup.ec.europa.eu/node/63567/) available on Joinup, the collaboration platform of the [EU ISA² Programme](https://ec.europa.eu/isa2/):
 
 https://joinup.ec.europa.eu/solution/geodcat-ap
 
