@@ -46,38 +46,39 @@
 -->
 
 <xsl:transform
+    xmlns:adms   = "http://www.w3.org/ns/adms#"
     xmlns:cnt    = "http://www.w3.org/2011/content#"
     xmlns:dc     = "http://purl.org/dc/elements/1.1/"
+    xmlns:dcat   = "http://www.w3.org/ns/dcat#"
     xmlns:dct    = "http://purl.org/dc/terms/"
     xmlns:dctype = "http://purl.org/dc/dcmitype/"
-    xmlns:epsg   = "urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
-    xmlns:crs-nts = "http://www.opengis.net/crs-nts/1.0"
+    xmlns:foaf   = "http://xmlns.com/foaf/0.1/"
+    xmlns:gsp    = "http://www.opengis.net/ont/geosparql#"
+    xmlns:locn   = "http://www.w3.org/ns/locn#"
     xmlns:owl    = "http://www.w3.org/2002/07/owl#"
+    xmlns:prov   = "http://www.w3.org/ns/prov#"
     xmlns:rdf    = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs   = "http://www.w3.org/2000/01/rdf-schema#"
     xmlns:skos   = "http://www.w3.org/2004/02/skos/core#"
-    xmlns:xsl    = "http://www.w3.org/1999/XSL/Transform"
-    xmlns:earl   = "http://www.w3.org/ns/earl#"
-    xmlns:dcat   = "http://www.w3.org/ns/dcat#"
-    xmlns:foaf   = "http://xmlns.com/foaf/0.1/"
-    xmlns:wdrs   = "http://www.w3.org/2007/05/powder-s#"
-    xmlns:prov   = "http://www.w3.org/ns/prov#"
     xmlns:vcard  = "http://www.w3.org/2006/vcard/ns#"
-    xmlns:adms   = "http://www.w3.org/ns/adms#"
-    xmlns:gsp    = "http://www.opengis.net/ont/geosparql#"
-    xmlns:locn   = "http://www.w3.org/ns/locn#"
-    xmlns:gmd    = "http://www.isotc211.org/2005/gmd"
-    xmlns:gmx    = "http://www.isotc211.org/2005/gmx"
+
+    xmlns:crs-nts = "http://www.opengis.net/crs-nts/1.0"
+    xmlns:epsg   = "urn:x-ogp:spec:schema-xsd:EPSG:2.2:dataset"
+    xmlns:epsg1  = "urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset"
+    xmlns:epsg22 = "urn:x-ogp:spec:schema-xsd:EPSG:2.2:dataset"
     xmlns:gco    = "http://www.isotc211.org/2005/gco"
+    xmlns:gmd    = "http://www.isotc211.org/2005/gmd"
+    xmlns:gml    = "http://www.opengis.net/gml/3.2"
+    xmlns:gmx    = "http://www.isotc211.org/2005/gmx"
     xmlns:srv    = "http://www.isotc211.org/2005/srv"
     xmlns:xsi    = "http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gml    = "http://www.opengis.net/gml/3.2"
+    xmlns:xsl    = "http://www.w3.org/1999/XSL/Transform"
     xmlns:xlink  = "http://www.w3.org/1999/xlink"
-    xmlns:igp    = "http://inspire.ec.europa.eu/schemas/geoportal/1.0"
-    xmlns:i      = "http://inspire.ec.europa.eu/schemas/common/1.0"
-    xmlns:schema = "http://schema.org/"
-    exclude-result-prefixes="cnt dctype epsg crs-nts xsl earl dcat foaf wdrs prov vcard adms gsp gmd gmx gco srv xsi gml xlink igp i schema"
-    version="1.0">
+    
+    exclude-result-prefixes="cnt dctype epsg1 epsg22 epsg crs-nts xsl dcat foaf prov vcard adms gsp gmd gmx gco srv xsi gml xlink"
+    
+    version="1.0"
+>
 
   <xsl:output 
     method="xml"
@@ -145,38 +146,7 @@
 
   <xsl:param name="xsd">http://www.w3.org/2001/XMLSchema#</xsl:param>
   <xsl:param name="dct">http://purl.org/dc/terms/</xsl:param>
-  <xsl:param name="dctype">http://purl.org/dc/dcmitype/</xsl:param>
   <xsl:param name="skos">http://www.w3.org/2004/02/skos/core#</xsl:param>
-<!-- Currently not used.
-  <xsl:param name="timeUri">http://placetime.com/</xsl:param>
-  <xsl:param name="timeInstantUri" select="concat($timeUri,'instant/gregorian/')"/>
-  <xsl:param name="timeIntervalUri" select="concat($timeUri,'interval/gregorian/')"/>
--->
-  <xsl:param name="dcat">http://www.w3.org/ns/dcat#</xsl:param>
-  <xsl:param name="gsp">http://www.opengis.net/ont/geosparql#</xsl:param>
-  <xsl:param name="op">http://publications.europa.eu/resource/authority/</xsl:param>
-  <xsl:param name="opcountry" select="concat($op,'country/')"/>
-  <xsl:param name="oplang" select="concat($op,'language/')"/>
-  <xsl:param name="opcb" select="concat($op,'corporate-body/')"/>
-  <xsl:param name="opfq" select="concat($op,'frequency/')"/>
-  <xsl:param name="cldFrequency">http://purl.org/cld/freq/</xsl:param>
-<!-- This is used as the datatype for the GeoJSON-based encoding of the bounding box. -->
-  <xsl:param name="geojsonMediaTypeUri">https://www.iana.org/assignments/media-types/application/vnd.geo+json</xsl:param>
-
-<!-- INSPIRE code list URIs -->
-
-  <xsl:param name="INSPIRECodelistUri">http://inspire.ec.europa.eu/metadata-codelist/</xsl:param>
-  <xsl:param name="SpatialDataServiceCategoryCodelistUri" select="concat($INSPIRECodelistUri,'SpatialDataServiceCategory')"/>
-  <xsl:param name="DegreeOfConformityCodelistUri" select="concat($INSPIRECodelistUri,'DegreeOfConformity')"/>
-  <xsl:param name="ResourceTypeCodelistUri" select="concat($INSPIRECodelistUri,'ResourceType')"/>
-  <xsl:param name="ResponsiblePartyRoleCodelistUri" select="concat($INSPIRECodelistUri,'ResponsiblePartyRole')"/>
-  <xsl:param name="SpatialDataServiceTypeCodelistUri" select="concat($INSPIRECodelistUri,'SpatialDataServiceType')"/>
-  <xsl:param name="TopicCategoryCodelistUri" select="concat($INSPIRECodelistUri,'TopicCategory')"/>
-
-<!-- INSPIRE code list URIs (not yet supported; the URI pattern is tentative) -->
-
-  <xsl:param name="SpatialRepresentationTypeCodelistUri" select="concat($INSPIRECodelistUri,'SpatialRepresentationTypeCode')"/>
-  <xsl:param name="MaintenanceFrequencyCodelistUri" select="concat($INSPIRECodelistUri,'MaintenanceFrequencyCode')"/>
 
 <!-- INSPIRE glossary URI -->
 
@@ -214,7 +184,21 @@
 <!-- Reference systems -->
 
   <xsl:template match="gml:GeodeticCRS|gml:VerticalCRS|gml:ProjectedCRS|gml:DerivedCRS|gml:CompoundCRS|gml:EngineeringCRS|gml:ImageCRS|gml:TemporalCRS">
-    <xsl:param name="uri" select="gml:identifier"/>
+    <xsl:param name="uri">
+      <xsl:variable name="id" select="normalize-space(gml:identifier)"/>
+      <xsl:variable name="code-space" select="normalize-space(gml:identifier/@codeSpace)"/>
+      <xsl:choose>
+        <xsl:when test="starts-with($id,$EpsgSrsBaseUri)">
+          <xsl:value-of select="$id"/>
+        </xsl:when>
+        <xsl:when test="starts-with($id,concat($EpsgSrsBaseUrn,'::'))">
+          <xsl:value-of select="concat($EpsgSrsBaseUri,substring-after($id,concat($EpsgSrsBaseUrn,'::')))"/>
+        </xsl:when>
+        <xsl:when test="number($id) = number($id)">
+          <xsl:value-of select="concat($EpsgSrsBaseUri,$id)"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:param>
     <xsl:param name="urn" select="concat($EpsgSrsBaseUrn,'::',substring-after($uri,$EpsgSrsBaseUri))"/>
     <rdf:Description rdf:about="{$uri}">
       <rdf:type rdf:resource="{$skos}Concept"/>
@@ -227,6 +211,7 @@
           <dct:type rdf:resource="{$inspire-glossary-uri}SpatialReferenceSystem"/>
         </xsl:otherwise>
       </xsl:choose>
+      <skos:notation rdf:datatype="{$xsd}anyURI"><xsl:value-of select="$uri"/></skos:notation>
       <dct:identifier rdf:datatype="{$xsd}anyURI"><xsl:value-of select="$uri"/></dct:identifier>
       <owl:sameAs rdf:resource="{$urn}"/>
       <skos:inScheme rdf:resource="{$epsg-register-uri}"/>
@@ -234,10 +219,22 @@
       <skos:prefLabel xml:lang="en"><xsl:value-of select="gml:name"/></skos:prefLabel>
       <rdfs:label xml:lang="en"><xsl:value-of select="gml:name"/></rdfs:label>
       <dct:title xml:lang="en"><xsl:value-of select="gml:name"/></dct:title>
-      <skos:scopeNote xml:lang="en"><xsl:value-of select="gml:scope"/></skos:scopeNote>
-      <xsl:if test="gml:remarks">
-        <rdfs:comment xml:lang="en"><xsl:value-of select="gml:remarks"/></rdfs:comment>
+      <xsl:if test="normalize-space(gml:scope) != ''">
+        <skos:scopeNote xml:lang="en"><xsl:value-of select="normalize-space(gml:scope)"/></skos:scopeNote>
       </xsl:if>
+      <xsl:for-each select="gml:metaDataProperty/epsg:CommonMetaData/epsg:Usage">
+        <xsl:if test="normalize-space(gml:scope) != ''">
+          <skos:scopeNote xml:lang="en"><xsl:value-of select="normalize-space(gml:scope)"/></skos:scopeNote>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:if test="normalize-space(gml:remarks) != ''">
+        <rdfs:comment xml:lang="en"><xsl:value-of select="normalize-space(gml:remarks)"/></rdfs:comment>
+      </xsl:if>
+      <xsl:for-each select="gml:metaDataProperty/epsg:CommonMetaData/epsg:alias">
+        <xsl:if test="normalize-space(epsg:remarks) != ''">
+          <rdfs:comment xml:lang="en"><xsl:value-of select="normalize-space(epsg:remarks)"/></rdfs:comment>
+        </xsl:if>
+      </xsl:for-each>
       <dc:type xml:lang="en"><xsl:value-of select="gml:metaDataProperty/epsg:CommonMetaData/epsg:type"/></dc:type>
       <dc:source xml:lang="en"><xsl:value-of select="gml:metaDataProperty/epsg:CommonMetaData/epsg:informationSource"/></dc:source>
       <dct:modified rdf:datatype="{$xsd}dateTime"><xsl:value-of select="gml:metaDataProperty/epsg:CommonMetaData/epsg:revisionDate"/></dct:modified>
@@ -246,11 +243,128 @@
       <xsl:for-each select="epsg:AreaOfUse">
         <dct:spatial>
           <dct:Location>
-            <rdfs:label xml:lang="en"><xsl:value-of select="gmd:description/*"/></rdfs:label>
+            <xsl:if test="normalize-space(gmd:description/*) != ''">
+              <rdfs:label xml:lang="en"><xsl:value-of select="normalize-space(gmd:description/*)"/></rdfs:label>
+            </xsl:if>
             <xsl:apply-templates select="gmd:geographicElement/gmd:EX_GeographicBoundingBox"/>
           </dct:Location>
         </dct:spatial> 
       </xsl:for-each>
+      <xsl:for-each select="gml:metaDataProperty/epsg:CommonMetaData/epsg:Usage">
+        <xsl:if test="normalize-space(epsg:extent/@xlink:href) != ''">
+          <dct:spatial>
+            <dct:Location rdf:about="{normalize-space(epsg:extent/@xlink:href)}"/>
+          </dct:spatial>
+        </xsl:if>
+      </xsl:for-each>
+
+<!-- Tentative mappings - Work in progress-->
+
+      <xsl:for-each select="gml:metaDataProperty/epsg:CRSMetaData">
+        <xsl:call-template name="BaseCrsAndConversion">
+          <xsl:with-param name="conversion" select="normalize-space(epsg:projectionConversion/@xlink:href)"/>
+          <xsl:with-param name="src-crs" select="normalize-space(epsg:sourceGeographicCRS/@xlink:href)"/>
+        </xsl:call-template>
+      </xsl:for-each>
+      <xsl:if test="normalize-space(gml:baseGeographicCRS/@xlink:href) != ''">
+        <xsl:call-template name="BaseCrsAndConversion">
+          <xsl:with-param name="conversion" select="normalize-space(gml:conversion/@xlink:href)"/>
+          <xsl:with-param name="src-crs" select="normalize-space(gml:baseGeographicCRS/@xlink:href)"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:if test="normalize-space(gml:baseGeodeticCRS/@xlink:href) != ''">
+        <xsl:call-template name="BaseCrsAndConversion">
+          <xsl:with-param name="conversion" select="normalize-space(gml:conversion/@xlink:href)"/>
+          <xsl:with-param name="src-crs" select="normalize-space(gml:baseGeodeticCRS/@xlink:href)"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:if test="normalize-space(gml:baseCRS/@xlink:href) != ''">
+        <xsl:call-template name="BaseCrsAndConversion">
+          <xsl:with-param name="conversion" select="normalize-space(gml:conversion/@xlink:href)"/>
+          <xsl:with-param name="src-crs" select="normalize-space(gml:baseCRS/@xlink:href)"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:for-each select="gml:affineCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:cartesianCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:cylindricalCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:ellipsoidalCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:linearCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:polarCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:sphericalCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:userDefinedCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:timeCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:verticalCS">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:coordinateSystem">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:engineeringDatum">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:geodeticDatum">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:imageDatum">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:temporalDatum">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+      <xsl:for-each select="gml:verticalDatum">
+        <xsl:if test="normalize-space(@xlink:href) != ''">
+          <dct:relation rdf:resource="{normalize-space(@xlink:href)}"/>
+        </xsl:if>
+      </xsl:for-each>
+
     </rdf:Description>
   </xsl:template>
 
@@ -323,5 +437,44 @@
 -->
   </xsl:template>
   
+<!-- Base / source CRS & conversion -->  
+  
+  <xsl:template name="BaseCrsAndConversion">
+    <xsl:param name="conversion"/>
+    <xsl:param name="src-crs"/>
+    <xsl:param name="src-crs-uri">
+      <xsl:choose>
+        <xsl:when test="starts-with($src-crs,'https://apps.epsg.org/api/v1/CoordRefSystem/')">
+          <xsl:value-of select="concat($EpsgSrsBaseUri,substring-before(substring-after($src-crs,'https://apps.epsg.org/api/v1/CoordRefSystem/'),'/export?format=gml'))"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$src-crs"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:param>
+    <xsl:if test="$src-crs != ''">
+      <prov:wasDerivedFrom>
+        <prov:Entity rdf:about="{$src-crs-uri}"/>
+      </prov:wasDerivedFrom>
+    </xsl:if>
+    <xsl:if test="$conversion != '' and $src-crs != ''">
+      <prov:qualifiedDerivation>
+        <prov:Derivation>
+          <prov:entity rdf:resource="{$src-crs-uri}"/>
+          <prov:hadActivity>
+            <prov:Activity>
+              <prov:qualifiedAssociation>
+                <prov:Association>
+                  <prov:hadPlan>
+                    <prov:Plan rdf:about="{$conversion}"/>
+                  </prov:hadPlan>
+                </prov:Association>
+              </prov:qualifiedAssociation>
+            </prov:Activity>
+          </prov:hadActivity>
+        </prov:Derivation>
+      </prov:qualifiedDerivation>
+    </xsl:if>
+  </xsl:template>
 
 </xsl:transform>
