@@ -21,6 +21,8 @@
 
   Contributors: ISA GeoDCAT-AP Working Group (https://github.com/SEMICeu/geodcat-ap) 
 
+  Source code:  https://github.com/SEMICeu/epsg-to-rdf
+
   This work was supported by the EU Interoperability Solutions for
   European Public Administrations Programme (http://ec.europa.eu/isa)
   through Action 1.17: Re-usable INSPIRE Reference Platform
@@ -37,7 +39,7 @@
   reference systems defined in the geospatial profile of DCAT-AP (GeoDCAT-AP), 
   available on Joinup, the collaboration platform of the EU ISA Programme:
 
-    https://joinup.ec.europa.eu/node/139283/
+    https://joinup.ec.europa.eu/solution/geodcat-ap
 
   As such, this XSLT must be considered as unstable, and can be updated any
   time based on the revisions to the GeoDCAT-AP specifications and
