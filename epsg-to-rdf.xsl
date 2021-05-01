@@ -45,6 +45,15 @@
   time based on the revisions to the GeoDCAT-AP specifications and
   related work in the framework of INSPIRE and the EU ISA Programme.
 
+  The official distributions of this XSLT are published in the dedicated GitHub
+  repository:
+  
+    https://github.com/SEMICeu/epsg-to-rdf
+
+  Comments and inquiries should be sent via the corresponding issue tracker: 
+
+    https://github.com/SEMICeu/epsg-to-rdf/issues
+
 -->
 
 <xsl:transform
